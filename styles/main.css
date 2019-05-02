@@ -6,19 +6,8 @@
   --colorMain:#39383a;
   --colorWhite:#fff;
   --hoverLink:#c54738;
-  --paletteColor5:#adadb0;
-  --paletteColor6:#56658b;
-  --paletteColor7:#f9c900;
-  --paletteColor8:#101021;
-  --paletteColor9:#71717a;
-  --paletteColor10:#f0f0f6;
-  --paletteColor11:#93939d;
-  --paletteColor12:#e4e4eb;
-  --paletteColor14:#414450;
-  --popupBg:rgba(33,33,46,0.76);
-  --popupFromBg:#333349;
-  --cubic1:cubic-bezier(0.55,0.085,0.68,0.53);
-  --cubic2:cubic-bezier(0.6,-0.28,0.735,0.045);
+  --colorItemText:#56658b;
+  --colorYellow:#f9c900;
   
 }
 
@@ -322,58 +311,6 @@ li {
   margin-top: 52px;
 }
 
-.list-item {
-  padding-left: 40px;
-  padding-bottom: 30px;
-  position: relative;
-}
-
-.list-item:before {
-  content: '';
-  width: 9px;
-  height: 9px;
-  background-color: var(--colorMain);
-  position: absolute;
-  border-radius: 50%;
-  top: 6px;
-  left: 0;
-}
-
-.list-item .list-item__title {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--colorMain);
-  font-family: "Open Sans";
-  text-transform: uppercase;
-  letter-spacing: 1.04px;
-}
-
-.list-item .list-item__date {
-  margin: 12px 0 19px;
-  color: var(--colorMain);
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.68px;
-}
-
-.list-item .list-item__text {
-  color: #777777;
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.38px;
-}
-
-
-
-
-
-
-
-
-
 .itemsList {
   display: flex;
   flex-wrap: wrap;
@@ -385,14 +322,14 @@ li {
   margin: 1.5% 1.5% .5%;
   perspective: 1000px;
   font-family: Montserrat;
-  color: var(--paletteColor4);
+  color: var(--colorWhite);
   font-size: 17px;
   font-weight: 300;
   line-height: 1.5em;
 }
 
 .item .item__wrapper {
-  width: 347px;
+  width: 295px;
   height: 206px;
   transform-style: preserve-3d;
   transition: all 1s ease;
@@ -403,12 +340,12 @@ li {
 }
 
 .item:hover .item__title {
-  color: var(--paletteColor4);
+  color: var(--colorMain);
 }
 
 .item:hover .item__title span:before,
 .item:hover .item__line:after  {
-  background-color: var(--paletteColor4);
+  background-color: var(--colorMain);
 }
 
 .item__img {
@@ -435,7 +372,7 @@ li {
 
 .item__text {
   position: absolute;
-  background: var(--paletteColor6);
+  background: var(--colorItemText);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,7 +381,8 @@ li {
   right: 40px;
   bottom: 21px;
   transform-style: preserve-3d;
-  transform: translate3d(5px,-5px,-1px);
+  transform: translate3d(-18px,4px,-2px);
+  width: 80%;
 }
 
 .item__text p {
@@ -454,7 +392,7 @@ li {
 
 .item__title {
   font-family: Montserrat;
-  color: var(--paletteColor7);
+  color: var(--colorYellow);
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5em;
@@ -473,37 +411,17 @@ li {
   white-space: pre;
 }
 
-/* ,.item__line-1,.item__line-2 */
 .item__line {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-/* .item__line:after,.item__line-1:after,.item__line-2:after {
-  content: "";
-  width: 1px;
-  background: var(--paletteColor6);
-  position: absolute;
-  height: 200px;
-  left: 0;
-  top: 50%;
-  z-index: -1;
-  transform: translateY(-50%)
-} */
-
-/* .item__line-3,.item__line-4,.item__line-5 {
-  position: absolute;
-  left: 0;
-  top: 0
-} */
-
-/* -3:after,.item__line-4:after,.item__line-5 */
 .item__title span:before {
   content: "";
   height: 1px;
   width: 41px;
-  background: var(--paletteColor7);
+  background: var(--colorYellow);
   position: absolute;
   left: 0;
 }
@@ -511,10 +429,81 @@ li {
 .item__line:after {
   content: "";
   width: 1px;
-  background: var(--paletteColor7);
+  background: var(--colorYellow);
   position: absolute;
   height: 200px;
   left: 0;
   bottom: -12px;
   z-index: -1;
+}
+
+.list-item {
+  padding-left: 40px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.list-item:before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  background-color: var(--colorMain);
+  position: absolute;
+  border-radius: 50%;
+  top: 6px;
+  left: 0;
+}
+
+.other {
+  margin-top: 30px;
+}
+
+.list-item .list-item__title,
+.other .list-item__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--colorMain);
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  letter-spacing: 1.04px;
+}
+
+.list-item .list-item__date {
+  margin: 12px 0 19px;
+  color: var(--colorMain);
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.68px;
+}
+
+.list-item .list-item__text {
+  color: #777777;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.38px;
+}
+
+.skills-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 19px;
+}
+
+.skills-list__item .list-item__title {
+  flex-basis: 30%;
+}
+
+.level {
+  flex-grow: 1;
+  margin-left: 35px;
+  flex-basis: 65%;
+  width: 100%;
+}
+
+.level progress {
+  width: 100%;
 }
