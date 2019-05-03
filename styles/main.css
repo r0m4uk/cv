@@ -37,7 +37,7 @@ li {
 }
 
 .wrapper {
-  min-width: 960px;
+  max-width: 960px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -48,6 +48,7 @@ li {
   flex-basis: 36%;
   background-color: var(--colorMain);
   color: #fff;
+  margin: 23px 0 26px;
 }
 
 .profile-img {
@@ -73,7 +74,7 @@ li {
   margin: 20px 0 29px;
   color: var(--colorGrey);
   font-family: Roboto;
-  font-size: 1.5em;
+  font-size: 20px;
   font-weight: 300;
   letter-spacing: 1.5px;
 }
@@ -314,6 +315,7 @@ li {
 .itemsList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 15px;
 }
 
@@ -329,7 +331,7 @@ li {
 }
 
 .item .item__wrapper {
-  width: 295px;
+  width: 347px;
   height: 206px;
   transform-style: preserve-3d;
   transition: all 1s ease;
@@ -381,7 +383,7 @@ li {
   right: 40px;
   bottom: 21px;
   transform-style: preserve-3d;
-  transform: translate3d(-18px,4px,-2px);
+  transform: translate3d(-5px,1px,-2px);
   width: 80%;
 }
 
